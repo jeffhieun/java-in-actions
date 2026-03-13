@@ -7,8 +7,8 @@ import java.util.Map;
 public class Solution04 {
     public static void main(String[] args) {
         System.out.printf("**firstUniqCharacterLowerCase**");
-        String input1 ="leetcode"; // 0
-        System.out.println("firstUniqCharacterLowerCase==>> My output 1: " + firstUniqCharacterLowerCase(input1));
+//        String input1 ="leetcode"; // 0
+//        System.out.println("firstUniqCharacterLowerCase==>> My output 1: " + firstUniqCharacterLowerCase(input1));
 
         String input2 ="Google"; // 0
         System.out.println("findAnyCase==>> My output 1: " + findAnyCase(input2));
@@ -33,6 +33,8 @@ public class Solution04 {
         Map<Character, Integer> count = new HashMap<>();
 
         for(char c : input.toCharArray()) {
+
+            System.out.println("test info: "+count.getOrDefault(c,0));
             count.put(c, count.getOrDefault(c,0) + 1);
         }
 
